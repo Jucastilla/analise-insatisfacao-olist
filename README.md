@@ -22,11 +22,14 @@ A análise busca ainda transformar os resultados obtidos em informações úteis
 
 ### 1. Coleta e Fontes de Dados
 
-Para o desenvolvimento do projeto, foram utilizados dados públicos da Olist, disponibilizados em arquivos estruturados no formato CSV.
+Para o desenvolvimento do projeto, foi utilizado o conjunto de dados público **Brazilian E-Commerce Public Dataset by Olist**, disponibilizado pela Olist na plataforma Kaggle.
 
-O conjunto de dados é composto por diferentes tabelas contendo informações sobre clientes, pedidos, itens, produtos, vendedores, pagamentos, entregas e avaliações dos consumidores.
+A base é composta por diferentes arquivos estruturados no formato CSV, contendo informações sobre clientes, pedidos, itens, produtos, vendedores, pagamentos, entregas e avaliações dos consumidores.
 
-Os arquivos foram acessados e processados no Google Colab, com integração ao Google Drive para armazenamento e organização dos dados utilizados ao longo do projeto.
+Os dados foram obtidos por meio de download direto da plataforma Kaggle e posteriormente armazenados no Google Drive para acesso e processamento no Google Colab.
+
+**Fonte dos dados:**  
+[Brazilian E-Commerce Public Dataset by Olist - Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 ### 2. Tratamento e Preparação dos Dados
 
