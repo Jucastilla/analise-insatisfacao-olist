@@ -1,6 +1,6 @@
 # Projeto de Parceria | Semantix
 
-## Análise da Insatisfação dos Consumidores no E-commerce com Python
+## Análise da Insatisfação no E-commerce com Python
 
 ## Sobre o Projeto
 
