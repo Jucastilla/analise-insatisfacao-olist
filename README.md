@@ -152,7 +152,7 @@ A segunda página complementa a visão geral com análises voltadas à distribui
 
 A página também apresenta as conclusões da análise e recomendações baseadas nos resultados encontrados, permitindo relacionar os indicadores apresentados a possíveis ações para redução da insatisfação dos consumidores.
 
-### Dashboard
+#### Dashboard
 
 O dashboard interativo pode ser acessado pelo link abaixo:
 
