@@ -4,8 +4,6 @@
 
 ## Sobre o Projeto
 
-## Sobre o Projeto
-
 Este projeto foi desenvolvido durante a formação em Análise de Dados da EBAC, a partir de uma proposta acadêmica de desenvolvimento de um projeto aplicado com dados públicos.
 
 Para a realização da análise, foi utilizado o Brazilian E-Commerce Public Dataset by Olist, disponibilizado publicamente na plataforma Kaggle. O conjunto de dados reúne informações sobre clientes, pedidos, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
