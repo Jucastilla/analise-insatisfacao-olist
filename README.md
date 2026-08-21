@@ -161,31 +161,6 @@ O dashboard interativo pode ser acessado pelo link abaixo:
 
 [Visualizar Dashboard no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
 
-
-### Dados
-
-📁 [Acessar Dados do Projeto](https://github.com/Jucastilla/analise-insatisfacao-olist/tree/main/data)
-
-A pasta `data` reúne os arquivos originais do **Brazilian E-Commerce Public Dataset by Olist** utilizados no desenvolvimento do projeto.
-
-Os dados foram obtidos publicamente na plataforma Kaggle e incluem informações sobre clientes, pedidos, itens dos pedidos, pagamentos, avaliações, produtos, vendedores e tradução das categorias de produtos.
-
-Arquivos disponibilizados no repositório:
-
-- `olist_customers_dataset.csv`
-- `olist_order_items_dataset.csv`
-- `olist_order_payments_dataset.csv`
-- `olist_order_reviews_dataset.csv`
-- `olist_orders_dataset.csv`
-- `olist_products_dataset.csv`
-- `olist_sellers_dataset.csv`
-- `product_category_name_translation.csv`
-
-O arquivo `olist_geolocation_dataset.csv`, também pertencente ao conjunto de dados original, não foi incluído no repositório devido ao seu tamanho. A base completa pode ser obtida diretamente na fonte original:
-
-📥 [Brazilian E-Commerce Public Dataset by Olist - Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-
-
 ### 6. Conclusões e Recomendações
 
 A análise demonstrou que a insatisfação dos consumidores no e-commerce está fortemente associada a fatores relacionados ao processo logístico, especialmente ao cumprimento dos prazos de entrega.
@@ -235,17 +210,29 @@ Os resultados demonstram como a análise de dados pode contribuir para transform
 
 Os notebooks desenvolvidos no Google Colab estão organizados de acordo com as etapas do projeto:
 
-📓 [01 - Preparação dos Dados](notebooks/01_data_preparation.ipynb)  
+📓 [01 - Preparação dos Dados](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/01_data_preparation.ipynb)  
 Preparação, tratamento, integração dos dados e construção das bases analíticas.
 
-📓 [02 - Análise Exploratória de Dados (EDA)](notebooks/02_eda.ipynb)  
+📓 [02 - Análise Exploratória de Dados (EDA)](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/02_eda.ipynb)  
 Análise exploratória e investigação dos principais fatores relacionados à insatisfação dos consumidores.
 
-📓 [03 - Modelagem Preditiva](notebooks/03_modelagem_preditiva.ipynb)  
+📓 [03 - Modelagem Preditiva](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/03_modelagem_preditiva.ipynb)  
 Desenvolvimento, comparação e avaliação dos modelos preditivos.
 
 ### Dashboard
 
-📊 [Visualizar Dashboard em PDF](dashboard/dashboard_olist.pdf)
+📊 [Visualizar Dashboard em PDF](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/dashboard/dashboard_olist.pdf)
 
 🔗 [Acessar Dashboard Interativo no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
+
+### Dados
+
+📁 [Acessar Dados do Projeto](https://github.com/Jucastilla/analise-insatisfacao-olist/tree/main/data)
+
+A pasta `data` reúne os arquivos originais do **Brazilian E-Commerce Public Dataset by Olist** utilizados no desenvolvimento do projeto.
+
+Os dados foram obtidos publicamente na plataforma Kaggle e incluem informações sobre clientes, pedidos, itens dos pedidos, pagamentos, avaliações, produtos, vendedores e tradução das categorias de produtos.
+
+O arquivo `olist_geolocation_dataset.csv`, também pertencente ao conjunto de dados original, não foi incluído no repositório devido ao limite de tamanho para upload pelo GitHub. A base completa pode ser obtida diretamente na fonte original:
+
+📥 [Brazilian E-Commerce Public Dataset by Olist - Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
