@@ -4,13 +4,13 @@
 
 ## Sobre o Projeto
 
-Este projeto foi desenvolvido durante a formação em Análise de Dados da EBAC, no contexto do Projeto de Parceria com a Semantix.
+Este projeto de análise de dados investiga os fatores relacionados à insatisfação dos consumidores no e-commerce, utilizando dados públicos da Olist.
 
-A proposta do projeto consiste em identificar uma problemática real e relevante que possa ser investigada por meio da análise de dados, utilizando fontes de dados públicas e não confidenciais. A escolha da problemática e da base de dados ficou a cargo do aluno.
+Para o desenvolvimento da análise, foi utilizado o Brazilian E-Commerce Public Dataset by Olist, disponibilizado publicamente na plataforma Kaggle. O conjunto de dados reúne informações sobre clientes, pedidos, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
 
-Para o desenvolvimento deste projeto, foi utilizada uma base pública de dados da Olist, empresa brasileira de e-commerce. O conjunto de dados reúne informações sobre clientes, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
+A problemática analisada foi a insatisfação dos consumidores. A partir dos dados disponíveis, o projeto busca compreender quais fatores estão relacionados às avaliações negativas, identificar padrões relevantes e avaliar a possibilidade de prever pedidos com maior risco de insatisfação.
 
-A problemática escolhida foi a insatisfação dos consumidores no e-commerce. A partir dos dados disponíveis, o projeto busca compreender quais fatores estão relacionados às avaliações negativas dos clientes e identificar padrões que possam auxiliar na tomada de decisões e na melhoria da experiência do consumidor.
+O projeto contempla preparação e integração de dados, análise exploratória, engenharia de variáveis, modelagem preditiva e desenvolvimento de dashboard, utilizando Python, Google Colab e Looker Studio.
 
 ## Objetivo
 
