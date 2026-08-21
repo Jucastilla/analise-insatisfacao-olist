@@ -4,11 +4,13 @@
 
 ## Sobre o Projeto
 
-Este projeto de análise de dados investiga os fatores relacionados à insatisfação dos consumidores no e-commerce, utilizando dados públicos da Olist.
+## Sobre o Projeto
 
-Para o desenvolvimento da análise, foi utilizado o Brazilian E-Commerce Public Dataset by Olist, disponibilizado publicamente na plataforma Kaggle. O conjunto de dados reúne informações sobre clientes, pedidos, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
+Este projeto foi desenvolvido durante a formação em Análise de Dados da EBAC, a partir de uma proposta acadêmica de desenvolvimento de um projeto aplicado com dados públicos.
 
-A problemática analisada foi a insatisfação dos consumidores. A partir dos dados disponíveis, o projeto busca compreender quais fatores estão relacionados às avaliações negativas, identificar padrões relevantes e avaliar a possibilidade de prever pedidos com maior risco de insatisfação.
+Para a realização da análise, foi utilizado o Brazilian E-Commerce Public Dataset by Olist, disponibilizado publicamente na plataforma Kaggle. O conjunto de dados reúne informações sobre clientes, pedidos, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
+
+A problemática escolhida foi a insatisfação dos consumidores no e-commerce. A partir dos dados disponíveis, o projeto busca compreender quais fatores estão relacionados às avaliações negativas, identificar padrões relevantes e avaliar a possibilidade de prever pedidos com maior risco de insatisfação.
 
 O projeto contempla preparação e integração de dados, análise exploratória, engenharia de variáveis, modelagem preditiva e desenvolvimento de dashboard, utilizando Python, Google Colab e Looker Studio.
 
