@@ -162,6 +162,30 @@ O dashboard interativo pode ser acessado pelo link abaixo:
 [Visualizar Dashboard no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
 
 
+### Dados
+
+📁 [Acessar Dados do Projeto](https://github.com/Jucastilla/analise-insatisfacao-olist/tree/main/data)
+
+A pasta `data` reúne os arquivos originais do **Brazilian E-Commerce Public Dataset by Olist** utilizados no desenvolvimento do projeto.
+
+Os dados foram obtidos publicamente na plataforma Kaggle e incluem informações sobre clientes, pedidos, itens dos pedidos, pagamentos, avaliações, produtos, vendedores e tradução das categorias de produtos.
+
+Arquivos disponibilizados no repositório:
+
+- `olist_customers_dataset.csv`
+- `olist_order_items_dataset.csv`
+- `olist_order_payments_dataset.csv`
+- `olist_order_reviews_dataset.csv`
+- `olist_orders_dataset.csv`
+- `olist_products_dataset.csv`
+- `olist_sellers_dataset.csv`
+- `product_category_name_translation.csv`
+
+O arquivo `olist_geolocation_dataset.csv`, também pertencente ao conjunto de dados original, não foi incluído no repositório devido ao seu tamanho. A base completa pode ser obtida diretamente na fonte original:
+
+📥 [Brazilian E-Commerce Public Dataset by Olist - Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+
 ### 6. Conclusões e Recomendações
 
 A análise demonstrou que a insatisfação dos consumidores no e-commerce está fortemente associada a fatores relacionados ao processo logístico, especialmente ao cumprimento dos prazos de entrega.
