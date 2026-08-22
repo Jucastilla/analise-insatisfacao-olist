@@ -1,6 +1,4 @@
-# Projeto de Análise de Insatisfação de Clientes | Olist
-
-## Análise de Dados e Modelagem Preditiva com Python
+# Análise de Insatisfação de Clientes da Olist
 
 ## Sobre o Projeto
 
