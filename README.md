@@ -1,6 +1,6 @@
-# Análise de Dados | E-commerce
+# Projeto de Análise de Insatisfação de Clientes | Olist
 
-## Análise da Insatisfação dos Consumidores com Python
+## Análise de Dados e Modelagem Preditiva com Python
 
 ## Sobre o Projeto
 
