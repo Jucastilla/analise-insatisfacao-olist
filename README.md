@@ -219,7 +219,7 @@ Desenvolvimento, comparação e avaliação dos modelos preditivos.
 
 ### Dashboard
 
-📊 📊 [Visualizar Dashboard em PDF](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/dashboard/Análise_da_Insatisfação_dos_Consumidores_Olist.pdf)
+📊 [Visualizar Dashboard em PDF](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/dashboard/Análise_da_Insatisfação_dos_Consumidores_Olist.pdf)
 
 🔗 [Acessar Dashboard Interativo no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
 
