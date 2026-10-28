@@ -1,72 +1,67 @@
 # Análise de Insatisfação de Clientes da Olist
 
-## Sobre o Projeto
+## Contexto
 
-Este projeto foi desenvolvido durante a formação em Análise de Dados da EBAC, a partir de uma proposta acadêmica de desenvolvimento de um projeto aplicado com dados públicos.
+Este projeto foi desenvolvido durante a formação em **Análise de Dados da EBAC**, a partir de uma proposta acadêmica de projeto aplicado com dados públicos.
 
-Para a realização da análise, foi utilizado o Brazilian E-Commerce Public Dataset by Olist, disponibilizado publicamente na plataforma Kaggle. O conjunto de dados reúne informações sobre clientes, pedidos, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
+Foi utilizado o **Brazilian E-Commerce Public Dataset by Olist**, disponibilizado na plataforma Kaggle, com informações sobre clientes, pedidos, produtos, pagamentos, vendedores, entregas e avaliações dos consumidores.
 
-A problemática escolhida foi a insatisfação dos consumidores no e-commerce. A partir dos dados disponíveis, o projeto busca compreender quais fatores estão relacionados às avaliações negativas, identificar padrões relevantes e avaliar a possibilidade de prever pedidos com maior risco de insatisfação.
+A problemática escolhida foi a insatisfação dos consumidores no e-commerce, investigando fatores associados às avaliações negativas e a possibilidade de identificar pedidos com maior risco de insatisfação.
 
-O projeto contempla preparação e integração de dados, análise exploratória, engenharia de variáveis, modelagem preditiva e desenvolvimento de dashboard, utilizando Python, Google Colab e Looker Studio.
+O desenvolvimento foi realizado com **Python e Google Colab** para preparação, análise e modelagem dos dados, além do **Looker Studio** para apresentação dos resultados em um dashboard.
 
 ## Objetivo
 
-Analisar os fatores relacionados à insatisfação dos consumidores no e-commerce, identificando padrões associados às avaliações negativas e desenvolvendo um modelo preditivo capaz de identificar pedidos com maior probabilidade de resultar em insatisfação.
+Analisar os fatores relacionados à insatisfação dos consumidores, identificar padrões associados às avaliações negativas e desenvolver modelos preditivos para avaliar a identificação de pedidos com maior probabilidade de insatisfação.
 
-A análise busca ainda transformar os resultados obtidos em informações úteis para o negócio, permitindo identificar fatores, categorias, regiões e períodos que demandam maior atenção.
+O projeto também teve como objetivo apresentar os resultados em um dashboard, destacando fatores, categorias, regiões e períodos que demandam maior atenção.
 
-## Etapas Desenvolvidas
+## Desenvolvimento
 
-### 1. Coleta e Fontes de Dados
+### Coleta e Fontes de Dados
 
-Para o desenvolvimento do projeto, foi utilizado o conjunto de dados público **Brazilian E-Commerce Public Dataset by Olist**, disponibilizado pela Olist na plataforma Kaggle.
+Foi utilizado o conjunto público **Brazilian E-Commerce Public Dataset by Olist**, composto por arquivos CSV com informações sobre clientes, pedidos, itens, produtos, vendedores, pagamentos, entregas e avaliações.
 
-A base é composta por diferentes arquivos estruturados no formato CSV, contendo informações sobre clientes, pedidos, itens, produtos, vendedores, pagamentos, entregas e avaliações dos consumidores.
+Os arquivos foram obtidos por download na plataforma Kaggle e armazenados no Google Drive para acesso e processamento no Google Colab.
 
-Os dados foram obtidos por meio de download direto da plataforma Kaggle e posteriormente armazenados no Google Drive para acesso e processamento no Google Colab.
+**Fonte:** [Brazilian E-Commerce Public Dataset by Olist — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-**Fonte dos dados:**  
-[Brazilian E-Commerce Public Dataset by Olist - Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+### Preparação e Integração dos Dados
 
-### 2. Tratamento e Preparação dos Dados
+A preparação foi realizada em Python, principalmente com **Pandas e NumPy**.
 
-A preparação dos dados foi realizada no Google Colab utilizando Python, principalmente com Pandas e NumPy.
+Inicialmente, foram analisados a estrutura das bases, os tipos de dados, os valores ausentes, as duplicidades e os diferentes níveis de granularidade.
 
-Inicialmente, foi analisada a estrutura das diferentes bases, considerando suas colunas, tipos de dados, valores ausentes, duplicidades e diferentes níveis de granularidade.
-
-Foi definida como unidade de análise do projeto:
+Foi definida a seguinte unidade de análise:
 
 **1 linha = 1 pedido.**
 
-Como algumas tabelas apresentavam múltiplos registros associados ao mesmo pedido, as informações de itens, pagamentos e avaliações foram tratadas e agregadas por `order_id` antes da integração com a base principal.
+Como algumas tabelas continham múltiplos registros para um mesmo pedido, as informações de itens, pagamentos e avaliações foram tratadas e agregadas por `order_id` antes da integração com a base principal.
 
-Nesta etapa foram realizadas:
+Essa etapa incluiu:
 
 - Importação e inspeção das bases;
 - Análise dos tipos de dados e valores ausentes;
-- Verificação de duplicidades e da granularidade das tabelas;
+- Verificação de duplicidades e granularidade;
 - Tratamento de pedidos com múltiplos itens, pagamentos e avaliações;
 - Agregação das informações por pedido;
-- Integração das diferentes tabelas;
+- Integração das tabelas;
 - Tratamento e padronização dos dados;
 - Criação de variáveis derivadas;
 - Definição da variável-alvo de insatisfação;
-- Construção da base analítica final;
-- Criação de uma base específica para a etapa de modelagem preditiva.
+- Construção das bases de análise e modelagem.
 
-Ao final da preparação, foram gerados os arquivos `olist_analytical_dataset.csv` e `olist_modeling_dataset.csv`, utilizados respectivamente nas etapas de análise exploratória e modelagem preditiva.
+Foram gerados dois arquivos:
 
-### 3. Análise Exploratória de Dados (EDA)
+- `olist_analytical_dataset.csv`: utilizado na análise exploratória;
+- `olist_modeling_dataset.csv`: utilizado na modelagem preditiva.
 
-Após a preparação da base analítica, foi realizada a análise exploratória dos dados no Google Colab utilizando Python e bibliotecas como Pandas, NumPy, Matplotlib e Seaborn.
+### Análise Exploratória de Dados
 
-A análise teve como objetivo compreender o comportamento da insatisfação dos consumidores e investigar fatores que poderiam estar relacionados às avaliações negativas.
+A análise exploratória foi realizada com **Pandas, NumPy, Matplotlib e Seaborn**, investigando:
 
-Foram analisados aspectos como:
-
-- Distribuição entre consumidores insatisfeitos e não insatisfeitos;
-- Tempo e prazo de entrega dos pedidos;
+- Distribuição entre pedidos classificados como insatisfeitos e não insatisfeitos;
+- Tempo e prazo de entrega;
 - Ocorrência de atrasos;
 - Valores dos produtos, frete e valor total dos pedidos;
 - Quantidade de itens e vendedores por pedido;
@@ -74,23 +69,13 @@ Foram analisados aspectos como:
 - Distribuição da insatisfação entre os estados;
 - Evolução da insatisfação ao longo do tempo.
 
-Entre os principais resultados observados, destacam-se:
+Os padrões identificados nessa etapa serviram de base para a modelagem preditiva.
 
-- 12,81% dos pedidos analisados foram classificados como insatisfeitos;
-- Pedidos atrasados apresentaram uma taxa de insatisfação significativamente superior à dos pedidos entregues dentro do prazo;
-- Consumidores insatisfeitos apresentaram maior tempo médio de entrega;
-- A antecedência da entrega em relação ao prazo estimado apresentou diferenças relevantes entre os grupos de satisfação;
-- Foram identificadas diferenças nas taxas de insatisfação entre categorias de produtos, estados e períodos analisados.
+### Modelagem Preditiva
 
-Esses resultados permitiram identificar padrões relevantes para a problemática estudada e serviram de base para a etapa de modelagem preditiva.
+A variável-alvo foi dividida entre **Insatisfeito** e **Não insatisfeito**.
 
-### 4. Modelagem Preditiva
-
-Após a análise exploratória, foi desenvolvida uma etapa de modelagem preditiva com o objetivo de avaliar a possibilidade de identificar pedidos com maior probabilidade de resultar em insatisfação dos consumidores.
-
-A variável-alvo utilizada foi a classificação de satisfação dos pedidos, dividida entre **Insatisfeito** e **Não insatisfeito**.
-
-A base de modelagem utilizada nesta etapa possui 95.824 registros e 34 colunas. Para o treinamento dos modelos, os dados foram divididos entre conjuntos de treino e teste, preservando a proporção da variável-alvo.
+A base de modelagem continha **95.824 registros e 34 colunas**. Os dados foram separados em conjuntos de treino e teste, preservando a proporção da variável-alvo.
 
 Foram avaliadas três abordagens:
 
@@ -98,39 +83,17 @@ Foram avaliadas três abordagens:
 - Regressão Logística;
 - Random Forest.
 
-Os modelos foram avaliados utilizando métricas como acurácia, precisão, recall, F1-score e ROC-AUC.
+A avaliação considerou acurácia, precisão, recall, F1-score e ROC-AUC.
 
-Os principais resultados foram:
+Também foi analisada a importância das variáveis no Random Forest para identificar as características de maior relevância para o modelo.
 
-| Modelo | Acurácia | Precisão | Recall | F1-score | ROC-AUC |
-|---|---:|---:|---:|---:|---:|
-| Baseline | 87,20% | 0,00% | 0,00% | 0,00% | 50,00% |
-| Regressão Logística | 81,02% | 34,77% | 55,09% | 42,64% | 75,30% |
-| Random Forest | 84,26% | 40,89% | 51,43% | 45,56% | 75,95% |
+### Desenvolvimento do Dashboard
 
-Embora o modelo baseline apresente maior acurácia, ele não consegue identificar os pedidos insatisfeitos, apresentando recall e F1-score iguais a zero. Esse resultado evidencia a importância de considerar outras métricas além da acurácia em uma base com classes desbalanceadas.
-
-Entre os modelos avaliados, o Random Forest apresentou o maior F1-score e ROC-AUC, demonstrando melhor equilíbrio na identificação dos casos de insatisfação.
-
-A análise de importância das variáveis do Random Forest destacou principalmente:
-
-- Diferença entre a data de entrega e o prazo estimado;
-- Ocorrência de atraso;
-- Tempo de entrega;
-- Quantidade de itens;
-- Valor do frete.
-
-Os resultados reforçam a relevância das características relacionadas à logística para a identificação de pedidos com maior risco de insatisfação.
-
-### 5. Visualização dos Dados no Looker Studio
-
-Os resultados da análise foram consolidados em um dashboard desenvolvido no Looker Studio, com o objetivo de apresentar os principais indicadores e padrões relacionados à insatisfação dos consumidores de forma visual e acessível.
-
-O dashboard foi estruturado em duas páginas complementares.
+Os resultados foram consolidados em um dashboard no **Looker Studio**, organizado em duas páginas.
 
 #### Visão Geral
 
-A primeira página apresenta os principais indicadores do conjunto de dados:
+A primeira página apresenta os indicadores:
 
 - Taxa de insatisfação;
 - Total de pedidos analisados;
@@ -138,99 +101,139 @@ A primeira página apresenta os principais indicadores do conjunto de dados:
 - Tempo médio de entrega;
 - Ticket médio.
 
-Também são apresentadas análises sobre:
+Também reúne análises sobre:
 
-- Impacto do atraso na taxa de insatisfação;
-- Tempo médio de entrega de consumidores insatisfeitos e não insatisfeitos;
+- Relação entre atraso e taxa de insatisfação;
+- Tempo médio de entrega de pedidos classificados como insatisfeitos e não insatisfeitos;
 - Categorias de produtos com maiores taxas de insatisfação.
 
 #### Análise Detalhada
 
-A segunda página complementa a visão geral com análises voltadas à distribuição da insatisfação, incluindo:
+A segunda página apresenta:
 
 - Desempenho por estado, considerando quantidade de pedidos, taxa de insatisfação e tempo médio de entrega;
-- Evolução da taxa de insatisfação ao longo dos meses.
+- Evolução mensal da taxa de insatisfação;
+- Conclusões e recomendações baseadas nos resultados.
 
-A página também apresenta as conclusões da análise e recomendações baseadas nos resultados encontrados, permitindo relacionar os indicadores apresentados a possíveis ações para redução da insatisfação dos consumidores.
+## Resultados
 
-#### Dashboard
+### Insatisfação e Entregas
 
-O dashboard interativo pode ser acessado pelo link abaixo:
+**12,81% dos pedidos analisados foram classificados como insatisfeitos.**
 
-[Visualizar Dashboard no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
+Os resultados mostraram uma associação entre a insatisfação e características do processo de entrega:
 
-### 6. Conclusões e Recomendações
+| Indicador | Grupo | Resultado |
+|---|---|---|
+| Taxa de insatisfação | Pedidos atrasados | 54,07% |
+| Taxa de insatisfação | Pedidos entregues dentro do prazo | 9,22% |
+| Tempo médio de entrega | Insatisfeitos | 20,21 dias |
+| Tempo médio de entrega | Não insatisfeitos | 11,39 dias |
 
-A análise demonstrou que a insatisfação dos consumidores no e-commerce está fortemente associada a fatores relacionados ao processo logístico, especialmente ao cumprimento dos prazos de entrega.
+Também foram observadas diferenças na antecedência da entrega em relação ao prazo estimado entre os grupos de satisfação.
 
-Entre os pedidos atrasados, a taxa de insatisfação alcançou 54,07%, enquanto nos pedidos entregues dentro do prazo foi de 9,22%. Os consumidores insatisfeitos registraram tempo médio de entrega de 20,21 dias, enquanto entre os não insatisfeitos esse tempo foi de 11,39 dias.
+### Categorias, Estados e Períodos
 
-Além dos fatores logísticos, foram identificadas diferenças nas taxas de insatisfação entre categorias de produtos, estados e períodos do ano, demonstrando que o problema não ocorre de maneira uniforme e permitindo identificar segmentos que demandam maior atenção.
+Foram identificadas diferenças nas taxas de insatisfação entre categorias de produtos, estados e períodos analisados.
 
-A etapa de modelagem preditiva reforçou a importância das variáveis relacionadas à entrega. Entre as variáveis de maior relevância para o modelo Random Forest estão a diferença entre a entrega e o prazo estimado, a ocorrência de atraso e o tempo de entrega.
+Esses resultados mostraram que a insatisfação não se distribuiu de maneira uniforme no conjunto de dados, permitindo identificar segmentos que demandam maior atenção.
 
-Com base nos resultados, recomenda-se:
+### Desempenho dos Modelos
+
+| Modelo | Acurácia | Precisão | Recall | F1-score | ROC-AUC |
+|---|---|---|---|---|---|
+| Baseline | 87,20% | 0,00% | 0,00% | 0,00% | 50,00% |
+| Regressão Logística | 81,02% | 34,77% | 55,09% | 42,64% | 75,30% |
+| Random Forest | 84,26% | 40,89% | 51,43% | 45,56% | 75,95% |
+
+O baseline apresentou a maior acurácia, mas não identificou os pedidos insatisfeitos, obtendo recall e F1-score iguais a zero. Esse resultado destacou a importância de avaliar outras métricas em uma base com classes desbalanceadas.
+
+O **Random Forest** apresentou os maiores valores de F1-score e ROC-AUC entre os modelos avaliados. A **Regressão Logística** apresentou o maior recall.
+
+Na análise de importância das variáveis do Random Forest, destacaram-se:
+
+- Diferença entre a data de entrega e o prazo estimado;
+- Ocorrência de atraso;
+- Tempo de entrega;
+- Quantidade de itens;
+- Valor do frete.
+
+Esses resultados reforçaram a relevância das características relacionadas à logística para a classificação da insatisfação na base analisada.
+
+### Entregas do Projeto
+
+O projeto resultou em:
+
+- Bases preparadas para análise exploratória e modelagem;
+- Análise dos fatores associados à insatisfação;
+- Comparação de três abordagens de modelagem;
+- Dashboard com indicadores, análises e recomendações.
+
+### Recomendações Derivadas da Análise
+
+Com base nos resultados, foram apresentadas as seguintes recomendações:
 
 - Priorizar o monitoramento dos prazos de entrega;
 - Identificar antecipadamente pedidos com maior risco de atraso;
-- Direcionar atenção especial a categorias e regiões com maiores taxas de insatisfação;
+- Direcionar atenção a categorias e regiões com maiores taxas de insatisfação;
 - Acompanhar a evolução da insatisfação ao longo do tempo;
-- Utilizar indicadores de desempenho logístico como apoio à tomada de decisão;
-- Explorar o modelo preditivo como ferramenta de apoio para identificação de pedidos com maior risco de insatisfação.
-
-Os resultados demonstram como a análise de dados pode contribuir para transformar informações sobre pedidos, entregas e avaliações em conhecimento aplicável ao negócio, permitindo identificar fatores associados à insatisfação e apoiar ações voltadas à melhoria da experiência do consumidor.
+- Utilizar indicadores logísticos como apoio à tomada de decisão;
+- Explorar o modelo preditivo como ferramenta de apoio à identificação de pedidos com maior risco de insatisfação.
 
 ## Habilidades Demonstradas
 
-- Análise de Dados
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Google Colab
-- Limpeza e Preparação de Dados
-- Análise Exploratória de Dados (EDA)
-- Engenharia de Variáveis
-- Machine Learning
-- Regressão Logística
-- Random Forest
-- Avaliação de Modelos Preditivos
-- Data Visualization
-- Looker Studio
-- Criação de Dashboards
-- Análise de Indicadores
-- Geração de Insights para Negócios
+- Análise de dados;
+- Python;
+- Pandas;
+- NumPy;
+- Matplotlib;
+- Seaborn;
+- Google Colab;
+- Limpeza e preparação de dados;
+- Integração de dados;
+- Análise exploratória de dados (EDA);
+- Engenharia de variáveis;
+- Machine Learning;
+- Regressão Logística;
+- Random Forest;
+- Avaliação de modelos preditivos;
+- Visualização de dados;
+- Looker Studio;
+- Criação de dashboards;
+- Análise de indicadores;
+- Geração de insights para negócios.
 
 ## Arquivos do Projeto
 
 ### Notebooks
 
-Os notebooks desenvolvidos no Google Colab estão organizados de acordo com as etapas do projeto:
+Os notebooks desenvolvidos no Google Colab estão organizados por etapa.
 
-📓 [01 - Preparação dos Dados](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/01_data_preparation.ipynb)  
+#### [01 — Preparação dos Dados](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/01_data_preparation.ipynb)
+
 Preparação, tratamento, integração dos dados e construção das bases analíticas.
 
-📓 [02 - Análise Exploratória de Dados (EDA)](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/02_eda.ipynb)  
-Análise exploratória e investigação dos principais fatores relacionados à insatisfação dos consumidores.
+#### [02 — Análise Exploratória de Dados](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/02_eda.ipynb)
 
-📓 [03 - Modelagem Preditiva](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/03_modelagem_preditiva.ipynb)  
+Investigação dos principais fatores relacionados à insatisfação dos consumidores.
+
+#### [03 — Modelagem Preditiva](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/notebooks/03_modelagem_preditiva.ipynb)
+
 Desenvolvimento, comparação e avaliação dos modelos preditivos.
 
 ### Dashboard
 
-📊 [Visualizar Dashboard em PDF](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/dashboard/Análise_da_Insatisfação_dos_Consumidores_Olist.pdf)
-
-🔗 [Acessar Dashboard Interativo no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
+- [Visualizar Dashboard em PDF](https://github.com/Jucastilla/analise-insatisfacao-olist/blob/main/dashboard/An%C3%A1lise_da_Insatisfa%C3%A7%C3%A3o_dos_Consumidores_Olist.pdf)
+- [Acessar Dashboard Interativo no Looker Studio](https://datastudio.google.com/reporting/21cec6d7-f838-4c9c-ac2d-6a284944ebd9)
 
 ### Dados
 
-📁 [Acessar Dados do Projeto](https://github.com/Jucastilla/analise-insatisfacao-olist/tree/main/data)
+[Acessar Dados do Projeto](https://github.com/Jucastilla/analise-insatisfacao-olist/tree/main/data)
 
-A pasta `data` reúne os arquivos originais do **Brazilian E-Commerce Public Dataset by Olist** utilizados no desenvolvimento do projeto.
+A pasta `data` reúne os arquivos originais do **Brazilian E-Commerce Public Dataset by Olist** utilizados no projeto.
 
-Os dados foram obtidos publicamente na plataforma Kaggle e incluem informações sobre clientes, pedidos, itens dos pedidos, pagamentos, avaliações, produtos, vendedores e tradução das categorias de produtos.
+Os arquivos incluem informações sobre clientes, pedidos, itens dos pedidos, pagamentos, avaliações, produtos, vendedores e tradução das categorias de produtos.
 
-O arquivo `olist_geolocation_dataset.csv`, também pertencente ao conjunto de dados original, não foi incluído no repositório devido ao limite de tamanho para upload pelo GitHub. A base completa pode ser obtida diretamente na fonte original:
+O arquivo `olist_geolocation_dataset.csv` não foi incluído no repositório devido ao limite de tamanho para upload pelo GitHub. A base completa pode ser obtida na fonte original:
 
-📥 [Brazilian E-Commerce Public Dataset by Olist - Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+[Brazilian E-Commerce Public Dataset by Olist — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
